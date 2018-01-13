@@ -32,12 +32,10 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  },
-  'GET /crypto/getCrypto/:shortName': 'CryptoController.getCrypto',
-  'GET /cryptoHistoryDay/view/:shortName': 'CryptoHistoryDayController.getCryptoHistoryDay',
-  'GET /cryptoHistoryHour/view/:shortName': 'CryptoHistoryHourController.getCryptoHistoryHour'
+  'GET /api/trade': 'TradeController.list',
+  'GET /api/crypto/getCrypto/:shortName': 'CryptoController.getCrypto',
+  'GET /api/cryptoHistoryDay/view/:shortName': 'CryptoHistoryDayController.getCryptoHistoryDay',
+  'GET /api/cryptoHistoryHour/view/:shortName': 'CryptoHistoryHourController.getCryptoHistoryHour'
 
   /***************************************************************************
   *                                                                          *

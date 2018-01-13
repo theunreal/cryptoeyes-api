@@ -19,8 +19,14 @@ module.exports = {
     crypto_from: {
       model: 'crypto'
     },
+    crypto_from_amount: {
+      type: 'float'
+    },
     crypto_to: {
       model: 'crypto'
+    },
+    crypto_to_amount: {
+      type: 'float'
     }
   }
 };

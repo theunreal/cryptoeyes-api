@@ -73,6 +73,14 @@ module.exports = {
     trades_to: {
       collection: 'trade',
       via: 'crypto_to'
+    },
+    toJSON: function() {
+      var obj = this.toObject();
+      delete obj.last_histoday_update;
+      delete obj.last_histohour_update;
+      delete obj.last_histominute_update;
+      delete obj.last_price_update;
+      return obj;
     }
   }
 };

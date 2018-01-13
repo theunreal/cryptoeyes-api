@@ -34,6 +34,14 @@ module.exports = {
     trades: {
       collection: 'trade',
       via: 'user_id'
+    },
+    toJSON: function() {
+      var obj = this.toObject();
+      delete obj.email;
+      delete obj.dob;
+      delete obj.createdAt;
+      delete obj.updatedAt;
+      return obj;
     }
 
 
